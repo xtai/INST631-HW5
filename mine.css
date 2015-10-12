@@ -1,0 +1,20 @@
+/*
+Emotionally Happy Web Homework
+INST 631 - Homework 5
+Xiaoyu Tai
+10/11/2015
+------------------------- */
+
+body {
+  padding: 50px 0;
+
+  background-color: #c44;
+  background-image: url(./dist/images/bg.png);
+}
+
+.container {
+  max-width: 500px;
+
+  border-radius: 8px;
+  background-color: rgba(255, 255, 255, .8);
+}
