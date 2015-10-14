@@ -6,15 +6,123 @@ Xiaoyu Tai
 ------------------------- */
 
 body {
-  padding: 50px 0;
-
   background-color: #c44;
-  background-image: url(./dist/images/bg.png);
+  /*z-index: -10;*/
+  /*background-image: url(./dist/images/bg.png);*/
+}
+
+#particles-js {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: -webkit-linear-gradient(#35ce93, #59adeb);
+  background: -o-linear-gradient(#35ce93, #59adeb);
+  background: -moz-linear-gradient(#35ce93, #59adeb);
+  background: linear-gradient(#35ce93, #59adeb);
 }
 
 .container {
-  max-width: 500px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  max-width: none;
+  margin-top: -179px;
+  margin-left: -167px;
+  padding: 0;
+}
 
+.form-container {
+  z-index: 200;
+  width: 334px;
+  /*height: 358px;*/
+  margin: 0 auto;
+  padding: 15px;
   border-radius: 8px;
   background-color: rgba(255, 255, 255, .8);
 }
+
+.form-signin .form-control,
+.has-success .form-control,
+.has-warning .form-control,
+.has-error .form-control {
+  font-size: 16px;
+  position: relative;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  height: auto;
+  padding: 10px;
+}
+
+.has-success .form-control {
+  z-index: 33;
+}
+
+.has-warning .form-control {
+  z-index: 66;
+}
+
+.has-error .form-control {
+  z-index: 99;
+}
+
+.form-signin .form-control:focus {
+  z-index: 101;
+}
+
+#inputUsername {
+  margin-bottom: -1px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+#inputEmail {
+  margin-bottom: 10px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+#inputPassword {
+  margin-bottom: -1px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+#inputConfirmPassword {
+  margin-bottom: 10px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+.c-indicator {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  border: .0625rem solid #ccc;
+}
+.c-input>input:checked~.c-indicator {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  border: .0625rem solid #0275d8;
+}
+
+#submitButton {
+  margin: 10px 0 0;
+}
+
+#credit-container {
+  position: fixed;
+  bottom: 10px;
+  width: 100%;
+  text-align: center;
+}
+
+#credit {
+  font-weight: 300;
+  cursor: pointer;
+  text-decoration: none;
+  color: #fff;
+}
+
+#credit:focus {
+  outline: none;
+}
+

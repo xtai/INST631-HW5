@@ -7,8 +7,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Homework 5 - INST 631 - Xiaoyu Tai</title>
   <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="dist/css/bootstrap.min.css">
-  <link rel="stylesheet" href="mine.css">
+  <link rel="stylesheet" href="./dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="./mine.css">
   <script src='https://www.google.com/recaptcha/api.js'></script>
   <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
   <!--[if lt IE 9]>
@@ -18,43 +18,42 @@
 </head>
 
 <body>
+  <!-- particles-js container -->
+  <div id="particles-js"></div>
+  <!-- form container -->
   <div class="container">
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <form>
-      <div class="form-group">
-        <label for="InputUsername">Username</label>
-        <input type="text" class="form-control input-lg" id="InputUsername" placeholder="Username">
-      </div>
-      <div class="form-group">
-        <label for="InputEmail">Email address</label>
-        <input type="email" class="form-control input-lg" id="exampleInputEmail" placeholder="Email">
-      </div>
-      <div class="form-group">
-        <label for="InputPassword">Password</label>
-        <input type="password" class="form-control input-lg" id="InputPassword" placeholder="Password">
-      </div>
-      <div class="form-group">
-        <label for="ConfirmPassword">Confirm Password</label>
-        <input type="password" class="form-control input-lg" id="ConfirmPassword" placeholder="Confirm Password">
-      </div>
-      <div class="g-recaptcha" data-sitekey="6Ldjag4TAAAAAID6zE3xyd3RmmNQi3aOoT40ivHe"></div>
-      <button type="submit" class="btn btn-lg btn-default">Submit</button>
-    </form>
-    <br />
-    <br />
-    <br />
-    <br />
-    <footer>INST 631 - Homework 5 - <a href="http://taixiaoyu.com">Xiaoyu Tai</a></footer>
+    <div class="form-container">
+      <form class="form-signin">
+        <div>
+          <input type="text" class="form-control input-lg" id="inputUsername" placeholder="Username" onfocusout="checkUsername()">
+        </div>
+        <div>
+          <input type="email" class="form-control input-lg" id="inputEmail" placeholder="Email" onfocusout="checkEmail()">
+        </div>
+        <div>
+          <input type="password" class="form-control input-lg" id="inputPassword" placeholder="Password" onfocusout="checkPassword()">
+        </div>
+        <div>
+          <input type="password" class="form-control input-lg" id="inputConfirmPassword" placeholder="Confirm Password" onfocusout="checkPassword()">
+        </div>
+        <div class="text-center">
+          <label class="c-input c-checkbox">
+            <input type="checkbox" id="inputRobot" onchange="checkRobot()">
+            <span class="c-indicator"></span> I'm not a robot
+          </label>
+        </div>
+        <a class="btn btn-block btn-primary-outline" for="submit" id="submitButton" onclick="submit()">Sign up</a>
+      </form>
+    </div>
+  </div>
+  <div id="credit-container">
+    <a tabindex="0" class="bd-popover" id="credit" data-toggle="popover" data-trigger="focus" data-placement="top" data-content="<a href='http://www.cs.umd.edu/~golbeck/INST631/' target='_blank'>INST 631</a> - <a href='http://www.cs.umd.edu/~golbeck/INST631/emotionHW.shtml' target='_blank'>Homework 5</a><br/><br/><br/><br/> - <a href='http://taixiaoyu.com' target='_blank'>Xiaoyu Tai</a>" data-html="true">Credit</a>
   </div>
   <!-- JavaScript -->
-  <script src="dist/js/jquery-1.11.3.min.js"></script>
-  <script src="dist/js/bootstrap.min.js"></script>
+  <script src="./dist/js/jquery-1.11.3.min.js"></script>
+  <script src="./dist/js/bootstrap.min.js"></script>
+  <script src="./dist/js/particles.min.js"></script>
+  <script src="./app.js"></script>
 </body>
 
 </html>
