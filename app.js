@@ -94,18 +94,19 @@ var resetState = function() {
   var l = ['inputUsername', 'inputEmail', 'inputPassword', 'inputConfirmPassword'];
   for (x in l) {
     changeState(l[x], null);
+    $('#' + l[x]).val('');
   }
 }
 
 var submit = function() {
-  if (c[0] && c[1] && c[2] && c[3]) {
+  if (c[0] && c[1] && c[2]) {
     console.log("yay");
+    $('#successModal').modal('show')
   }else{
     checkUsername()
     checkEmail()
     pw_check = true
     checkPassword()
-    checkRobot()
   }
 }
 
